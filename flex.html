@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html ,body, *{
+            margin:0px;
+            padding: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    //float布局中间宽度自适应
+        <section class="float left-right-center" >
+            <style>
+                .float{
+                    background: yellow;
+                    text-align: center;
+                }
+                .float .left{
+                    width:400px;
+                    height:50px;
+                    float:left;
+                    background:red;
+                }
+                .float .right{
+                    width: 400px;
+                    height: 50px;
+                    float: right;
+                    background: pink;
+
+                }
+                .center{
+                    height: 170px;
+                    background: black;
+                    color:#fff;
+                }
+            </style>
+
+                <div class="left"></div>
+                <div class="right"></div>
+            <div style="overflow: hidden">
+                <div class="center">center</div>
+            </div>
+
+        </section>
+        //flex布局-中间宽度自适应
+        <section class="layout-flex">
+            <style>
+                .layout-flex{
+                    display: flex;
+                    background: yellow;
+                }
+                .layout-flex .left{
+                    width: 400px;
+                    height:50px;
+                    background: red;
+
+                }
+                .layout-flex .right{
+                    width: 400px;
+                    height: 50px;
+                    background: pink;
+                }
+                .layout-flex .center{
+                    height: 100px;
+                    flex-grow: 1;
+                    background: black;
+                    color:#fff;
+                }
+            </style>
+            <div class="left"></div>
+            <div class="center">flex布局</div>
+            <div class="right"></div>
+        </section>
+
+        <section class="layout-absolute">
+            <style>
+                .layout-absolute{
+                    overflow: hidden;
+                    background: yellow;
+                    margin-top: 10px;
+                }
+                .layout-absolute div{
+                    color: #fff;
+                    position:absolute;
+                }
+                .layout-absolute .left{
+                    width: 400px;
+                    height:50px;
+                    left: 0;
+                    background: red;
+                }
+                .layout-absolute .right{
+                    width: 400px;
+                    height:50px;
+                    right: 0;
+                    background: pink;
+                }
+                .layout-absolute .center{
+                    background: black;
+                    left: 400px;
+                    right: 400px;
+                }
+            </style>
+            <article>
+                <div class="left"></div>
+                <div class="center">absolute定位</div>
+                <div class="right"></div>
+            </article>
+        </section>
+
+//表格布局
+        <section class="layout">
+            <style>
+                .layout .table{
+                    width: 100%;
+                    display: table;
+                    color: #ffffff;
+                    margin-top: 170px;
+                    color: #fff;
+                }
+                .layout .table>div{
+                    display: table-cell;
+                }
+                .table .left{
+                    width: 400px;
+                    background: red;
+                }
+                .table .right{
+                    width: 400px;
+                    background: pink;
+                }
+                .table .center{
+                    background: black;
+                }
+            </style>
+            <article class="table">
+                <div class="left"></div>
+                <div class="center">table布局</div>
+                <div class="right"></div>
+            </article>
+        </section>
+//grid布局
+        <section class="layout ">
+            <style>
+                .grid{
+                    display: grid;
+                    width: 100%;
+                    grid-template-rows: 70px;
+                    grid-template-columns:400px auto 400px;
+                }
+                .grid .left{
+                    background: red;
+                }
+                .grid .right{
+                    background: pink;
+                }
+                .gird .center{
+                    background: black;
+                }
+            </style>
+            <article class="grid">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </article>
+        </section>
+
+</body>
+</html>

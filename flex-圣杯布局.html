@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .grid{
+            display: flex;
+            flex-direction:column;
+            height: 100vh;
+        }
+        .header, .footer{
+            height: 50px;
+            background: red;
+        }
+        .content{
+            display: flex;
+            /*min-height: 100vh;*/
+            flex: 1 0 auto;
+            background: yellow;
+        }
+        .nav ,.aside{
+            flex: 0 0 160px;
+        }
+        .nav , .aside{
+            background: #cccccc;
+        }
+        .main{
+            flex:1;
+        }
+        
+        @media (max-width:375px) {
+            .content{
+                flex-direction: column;
+            }
+            .nav , .main ,.aside{
+                flex: 1;
+            }
+
+        }
+    </style>
+</head>
+<body class="grid">
+    <header class="header">header</header>
+    <content class="content">
+        <div class="nav">导航部分</div>
+        <div class="main">主要内容部分</div>
+        <div class="aside">副标题部分</div>
+    </content>
+    <footer class="footer">footer</footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html ,*{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+
+            background: #f5f5d5;
+        }
+        .Media{
+            display: flex;
+            height: 100vh;/*容器的大小需要规定好*/
+            flex-direction: column;
+        }
+        .header{
+            width: 100%;
+            height: 60px;
+            background: yellow;
+        }
+        .main{
+            flex: 5;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;/*这个每个版块蓝色背景相互独立的关键*/
+            /*background:red;*/
+        }
+        .left , .right{
+            flex: 1;
+            /*background: #cccccc;*/
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+        .left{
+            margin-right: 10px;
+        }
+        .media{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            padding: 10px;
+            background:#deded8;
+            border-radius:5%;
+        }
+        .media-img{
+            width: 50px;
+            height: 50px;
+            background: aqua;
+            margin-right: 10px;
+        }
+        .media-content-body{
+            flex: 1;
+            padding: 5px;
+            background:#deded8;
+        }
+        .media-title{
+            margin-bottom: 5px;
+        }
+        .right{
+            flex: 1;
+        }
+    </style>
+</head>
+<body class="Media">
+        <h3 class="header">悬挂式布局:主栏的左侧或右侧，需要添加一个图片栏</h3>
+        <content style="flex:1; display: flex">
+            <nav style="flex: 1; width: 40px;"></nav>
+            <main class="main">
+           <div class="left">
+               <div class="media">
+                   <div class="media-img"></div>
+                   <div class="media-content-body">
+                       <div class="media-title">标题一</div>
+                        <div>
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquam, amet aut blanditiis ducimus ea eveniet magnam non quasi soluta voluptate. A aliquam aliquid atque doloribus excepturi illum qui!
+                        </div>
+                   </div>
+               </div><div class="media">
+                   <div class="media-img"></div>
+                   <div class="media-content-body">
+                       <div class="media-title">标题一</div>
+                        <div>
+                            344566Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="left">
+               <div class="media">
+                   <div class="media-img"></div>
+                   <div class="media-content-body">
+                       <div class="media-title">标题一</div>
+                       <div>
+                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquam, amet aut blanditiis ducimus ea eveniet magnam non quasi soluta voluptate. A aliquam aliquid atque doloribus excepturi illum qui!
+                       </div>
+                   </div>
+               </div>
+               <div class="media">
+                   <div class="media-img"></div>
+                   <div class="media-content-body">
+                       <div class="media-title">标题一</div>
+                       <div>
+                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquam, amet aut blanditiis ducimus ea eveniet magnam non quasi soluta voluptate. A aliquam aliquid atque doloribus excepturi illum qui!
+                       </div>
+                   </div>
+               </div>
+           </div>
+                <div class="right">
+               <div class="media">
+                   <div class="media-img"></div>
+                   <div class="media-content-body">
+                       <div class="media-title">标题一</div>
+                       <div>
+                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquam, amet aut blanditiis ducimus ea eveniet magnam non quasi soluta voluptate. A aliquam aliquid atque doloribus excepturi illum qui!
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </main>
+            <aside style="flex: 1;width:40px;"></aside>
+        </content>
+</body>
+</html>
